@@ -2,11 +2,14 @@ package br.dev.samarasantos.temperatura.gui;
 
 
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+
 
 public class TelaConversor {
 
@@ -26,7 +29,7 @@ public class TelaConversor {
 		tela.setLocationRelativeTo(null);
 		tela.setLayout(null);
 		tela.setResizable(false);
-		tela.setVisible(true);
+		
 		
 		
 		JLabel lblCelsius = new JLabel();
@@ -48,14 +51,44 @@ public class TelaConversor {
 		buttonFahreinheit.setText("Fahreinheit");
 		buttonFahreinheit.setBounds(245, 115, 220, 60);
 		
+		JLabel lblResultado = new JLabel();
+		lblResultado.setText("Resultado");
+		Font font2 = new Font("Arial", Font.BOLD, 30);
+		lblResultado.setFont(font2);
+		lblResultado.setBounds(165, 135, 200, 200);
+		
+		JLabel lblMensagemErro = new JLabel();
+		lblMensagemErro.setText("Por favor, insira um número valido!");
+		lblMensagemErro.setBounds(150, 170, 250, 250);
+		
 		
 		tela.getContentPane().add(lblCelsius);
 		tela.getContentPane().add(txtCelsius);
 		tela.getContentPane().add(buttonKelvin);
 		tela.getContentPane().add(buttonFahreinheit);
+		tela.getContentPane().add(lblResultado);
+		tela.getContentPane().add(lblMensagemErro);
 		
+		buttonFahreinheit.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				
+			}
+		});
 		
+		buttonKelvin.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+			
+				
+			}
+		});
 		
+		tela.setVisible(true);
 	}
 	
 	
