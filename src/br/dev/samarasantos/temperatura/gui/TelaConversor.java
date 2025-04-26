@@ -10,6 +10,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import br.dev.samarasantos.temperatura.model.Temperatura;
+
 
 public class TelaConversor {
 
@@ -52,7 +54,7 @@ public class TelaConversor {
 		buttonFahreinheit.setBounds(245, 115, 220, 60);
 		
 		JLabel lblResultado = new JLabel();
-		lblResultado.setText("Resultado");
+		lblResultado.setText("");
 		Font font2 = new Font("Arial", Font.BOLD, 30);
 		lblResultado.setFont(font2);
 		lblResultado.setBounds(165, 135, 200, 200);
@@ -73,9 +75,13 @@ public class TelaConversor {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				String respostaUsuario = txtCelsius.getText();	
+				double celsius = Double.parseDouble(respostaUsuario);
 				
+				Temperatura temperatura = new Temperatura();
+				double resultado = temperatura.converterParaFahreinheit(celsius);
 				
-				
+				lblResultado.setText("" + resultado);
 			}
 		});
 		
