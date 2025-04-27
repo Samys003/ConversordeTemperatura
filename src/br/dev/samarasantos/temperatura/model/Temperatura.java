@@ -12,13 +12,13 @@ public class Temperatura {
 		this.celsius = celsius;
 	}
 
-	public double converterParaKelvin (double kelvin) {
-		 kelvin = celsius + 273.15;
-		 return kelvin;
+	public double converterParaKelvin () {
+		 return this.celsius + 273.15;
+		 
 		
 	}
-	public double converterParaFahreinheit (double fahreheit) {
-		fahreheit = (celsius * 9/5) + 32;
-		return fahreheit;
+	public double converterParaFahrenheit () {
+		return  (this.celsius * 9.0/5.0) + 32;
+		
 	}
 }
